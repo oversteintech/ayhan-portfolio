@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Ayhan Uzundal | Software Engineering Manager</title>
-  <meta name="description" content="Ayhan Uzundal — Software Engineering Manager and Product & Delivery Leader with 10+ years of experience in enterprise software delivery, automation, AI, CI/CD and engineering leadership." />
+  <meta name="description" content="Ayhan Uzundal — Software Engineering Manager and Project & Delivery Leader with 10+ years of experience in enterprise software delivery, automation, AI, CI/CD, and engineering leadership." />
   <meta name="author" content="Ayhan Uzundal" />
   <meta name="theme-color" content="#020617" />
 
@@ -14,348 +14,51 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
   <meta property="og:title" content="Ayhan Uzundal | Software Engineering Manager" />
-  <meta property="og:description" content="Building Products. Leading People. Delivering Impact." />
+  <meta property="og:description" content="Software Engineering Manager • Product & Delivery Leader • Automation, AI, CI/CD and enterprise software delivery." />
   <meta property="og:image" content="og-image.jpg" />
   <meta property="og:type" content="website" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ayhan Uzundal | Software Engineering Manager" />
-  <meta name="twitter:description" content="Building Products. Leading People. Delivering Impact." />
+  <meta name="twitter:description" content="Software Engineering Manager • Product & Delivery Leader" />
   <meta name="twitter:image" content="og-image.jpg" />
 
   <style>
-    :root {
-      --bg: #020617;
-      --bg2: #061121;
-      --card: rgba(15, 23, 42, .68);
-      --card2: rgba(2, 6, 23, .66);
-      --text: #f8fafc;
-      --soft: #cbd5e1;
-      --muted: #94a3b8;
-      --blue: #0094ff;
-      --cyan: #38bdf8;
-      --line: rgba(148, 163, 184, .18);
-      --line2: rgba(56, 189, 248, .36);
-      --shadow: 0 30px 90px rgba(0, 0, 0, .38);
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Inter, Arial, sans-serif; }
-    html { scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
-    body::before {
-      content: ""; position: fixed; inset: 0; z-index: -3;
-      background:
-        radial-gradient(circle at 18% 22%, rgba(0, 148, 255, .16), transparent 32%),
-        radial-gradient(circle at 88% 18%, rgba(56, 189, 248, .15), transparent 30%),
-        linear-gradient(180deg, #020617, #061121 48%, #020617);
-    }
-    body::after {
-      content: ""; position: fixed; inset: 0; z-index: -2; opacity: .28;
-      background-image:
-        linear-gradient(rgba(56,189,248,.12) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(56,189,248,.12) 1px, transparent 1px);
-      background-size: 72px 72px;
-      mask-image: linear-gradient(to bottom, black, transparent 74%);
-    }
-
-    a { color: inherit; text-decoration: none; }
-    .container { width: 92%; max-width: 1180px; margin: 0 auto; }
-
-    header {
-      position: sticky; top: 0; z-index: 50;
-      background: rgba(2, 6, 23, .86); backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--line);
-    }
-    nav { height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { display: flex; align-items: center; gap: 14px; font-weight: 900; letter-spacing: .2px; }
-    .brand img { width: 38px; height: 38px; border-radius: 11px; }
-    .brand span { font-size: 18px; }
-    .nav-links { display: flex; align-items: center; gap: 30px; }
-    .nav-links a { color: #e2e8f0; font-size: 14px; font-weight: 650; padding: 27px 0 23px; border-bottom: 2px solid transparent; transition: .22s ease; }
-    .nav-links a:hover, .nav-links a.active { color: var(--cyan); border-bottom-color: var(--cyan); }
-    .nav-cv {
-      padding: 12px 18px; border-radius: 10px; border: 1px solid rgba(56,189,248,.65);
-      color: #fff; font-weight: 800; font-size: 14px; display: inline-flex; align-items: center; gap: 9px;
-      background: rgba(15,23,42,.36); transition: .22s;
-    }
-    .nav-cv:hover { background: rgba(56,189,248,.12); transform: translateY(-1px); }
-
-    section { padding: 78px 0; }
-    .hero { padding: 28px 0 38px; min-height: calc(100vh - 74px); display: flex; align-items: center; border-bottom: 1px solid var(--line); }
-    .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; gap: 64px; align-items: center; }
-
-    .eyebrow {
-      display: inline-flex; align-items: center; padding: 8px 15px; border-radius: 999px;
-      border: 1px solid var(--cyan); color: var(--cyan);
-      background: rgba(0,148,255,.08); font-size: 12px; font-weight: 900; letter-spacing: .5px;
-      margin-bottom: 26px;
-    }
-    h1 {
-      font-size: clamp(44px, 5.3vw, 70px); line-height: 1.08; letter-spacing: -2px; margin-bottom: 24px;
-      text-shadow: 0 6px 28px rgba(0,0,0,.28);
-    }
-    h1 span {
-      display: block; color: var(--blue);
-      background: linear-gradient(90deg, #1d8cff, #38bdf8);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .hero-copy { max-width: 610px; color: var(--soft); font-size: 18px; margin-bottom: 34px; }
-
-    .buttons { display: flex; gap: 26px; flex-wrap: wrap; align-items: center; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-      padding: 16px 24px; border-radius: 10px; font-size: 16px; font-weight: 850;
-      border: 1px solid rgba(148,163,184,.25); transition: .22s ease;
-    }
-    .btn-primary { background: linear-gradient(135deg, #087cff, #0ea5e9); color: #fff; box-shadow: 0 18px 42px rgba(0,148,255,.28); }
-    .btn-primary:hover, .btn-secondary:hover { transform: translateY(-2px); }
-    .btn-secondary { background: rgba(2,6,23,.42); color: #fff; border-color: rgba(148,163,184,.32); }
-
-    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 48px; max-width: 560px; }
-    .metric { padding: 0 30px 0 0; margin-right: 24px; border-right: 1px solid var(--line); }
-    .metric:last-child { border-right: none; margin-right: 0; padding-right: 0; }
-    .metric .icon { color: var(--cyan); font-size: 28px; line-height: 1; margin-bottom: 12px; }
-    .metric strong { display: block; font-size: 28px; line-height: 1; margin-bottom: 7px; color: #fff; }
-    .metric span { color: var(--muted); font-size: 12px; }
-
-    .photo-card {
-      overflow: hidden; border: 1px solid rgba(0,148,255,.72); border-radius: 26px;
-      background: radial-gradient(circle at 50% 5%, rgba(0,148,255,.35), rgba(2,6,23,.35) 46%, rgba(2,6,23,.80));
-      box-shadow: var(--shadow);
-    }
-    .photo-wrap { min-height: 560px; display: flex; align-items: flex-end; justify-content: center; position: relative; }
-    .photo-wrap::before {
-      content:""; position:absolute; inset: 36px 38px 0; border-radius: 26px 26px 0 0;
-      background: radial-gradient(circle at 50% 5%, rgba(56,189,248,.20), transparent 52%);
-    }
-    .profile-photo {
-      position: relative; z-index: 1; width: min(88%, 430px); max-height: 545px;
-      object-fit: cover; object-position: center top;
-      filter: drop-shadow(0 28px 52px rgba(0,0,0,.48));
-    }
-    .info-strip {
-      margin: -4px 14px 14px; padding: 20px; position: relative; z-index: 2;
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
-      background: rgba(2, 6, 23, .78); backdrop-filter: blur(16px);
-      border: 1px solid var(--line); border-radius: 14px;
-    }
-    .info-item { padding: 0 20px; border-right: 1px solid var(--line); }
-    .info-item:last-child { border-right: 0; }
-    .info-item .icon { color: var(--cyan); font-size: 24px; margin-bottom: 8px; }
-    .info-item strong { display: block; font-size: 14px; margin-bottom: 3px; }
-    .info-item span { color: var(--muted); font-size: 12px; }
-
-    .about-block {
-      display: grid; grid-template-columns: .9fr 1.15fr .72fr; gap: 46px; align-items: start; margin-bottom: 44px;
-    }
-    .label { color: var(--blue); font-size: 13px; font-weight: 900; letter-spacing: .6px; text-transform: uppercase; margin-bottom: 12px; }
-    .section-title { font-size: 30px; line-height: 1.25; letter-spacing: -.8px; }
-    .section-desc { color: var(--soft); font-size: 16px; }
-    .learn { justify-self: end; align-self: center; }
-
-    .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-    .card {
-      min-height: 170px; padding: 28px 26px; border-radius: 12px;
-      background: linear-gradient(145deg, rgba(15,23,42,.72), rgba(2,6,23,.54));
-      border: 1px solid var(--line); transition: .25s ease;
-    }
-    .card:hover { transform: translateY(-5px); border-color: var(--line2); }
-    .card .icon { font-size: 32px; color: var(--blue); margin-bottom: 22px; }
-    .card h3 { font-size: 16px; margin-bottom: 10px; }
-    .card p { color: var(--soft); font-size: 14px; }
-
-    .tools { padding-top: 48px; }
-    .tool-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
-    .pill {
-      display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 12px;
-      border: 1px solid rgba(148,163,184,.22); background: rgba(2,6,23,.36); color: #e2e8f0; font-size: 13px;
-    }
-    .pill b { color: var(--blue); font-size: 15px; }
-
-    .footer-contact {
-      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-      background: rgba(2,6,23,.32); padding: 42px 0;
-    }
-    .contact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
-    .contact-item { display: flex; gap: 18px; align-items: flex-start; padding: 0 30px; border-right: 1px solid var(--line); }
-    .contact-item:first-child { padding-left: 0; }
-    .contact-item:last-child { border-right: 0; padding-right: 0; }
-    .contact-item .icon { color: var(--cyan); font-size: 30px; line-height: 1; }
-    .contact-item strong { display: block; font-size: 15px; margin-bottom: 2px; }
-    .contact-item span, .contact-item a { color: var(--soft); font-size: 14px; }
-
-    footer { padding: 26px 0; text-align: center; color: #64748b; }
-    .socials { display: flex; justify-content: center; gap: 18px; margin-bottom: 14px; }
-    .socials a {
-      width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;
-      border-radius: 50%; border: 1px solid rgba(56,189,248,.32); color: #e2e8f0; background: rgba(15,23,42,.64);
-    }
-
-    .fade { animation: fade .7s ease both; }
-    .delay { animation-delay: .12s; }
-    @keyframes fade { from { opacity:0; transform: translateY(16px); } to { opacity:1; transform: translateY(0); } }
-
-    @media (max-width: 980px) {
-      .nav-links, .nav-cv { display: none; }
-      .hero-grid, .about-block, .cards, .contact-grid { grid-template-columns: 1fr; }
-      .hero-grid { gap: 42px; }
-      .metrics { grid-template-columns: repeat(2, 1fr); gap: 22px; }
-      .metric { border-right: none; margin-right: 0; }
-      .photo-card { max-width: 560px; margin: 0 auto; }
-      .learn { justify-self: start; }
-      .contact-item { border-right: 0; border-bottom: 1px solid var(--line); padding: 20px 0; }
-      .contact-item:last-child { border-bottom: 0; }
-    }
-
-    @media (max-width: 560px) {
-      nav { height: 68px; }
-      section { padding: 58px 0; }
-      .hero { padding-top: 34px; }
-      h1 { font-size: 42px; }
-      .hero-copy { font-size: 16px; }
-      .buttons { gap: 12px; }
-      .btn { width: 100%; }
-      .metrics { grid-template-columns: repeat(2, 1fr); }
-      .metric strong { font-size: 23px; }
-      .photo-wrap { min-height: 390px; }
-      .profile-photo { width: 93%; max-height: 380px; }
-      .info-strip { grid-template-columns: 1fr; }
-      .info-item { border-right: 0; border-bottom: 1px solid var(--line); padding: 14px 0; }
-      .info-item:last-child { border-bottom: 0; }
-      .cards { gap: 14px; }
-    }
+    :root{--bg:#020617;--text:#e5e7eb;--muted:#94a3b8;--soft:#cbd5e1;--blue:#38bdf8;--line:rgba(255,255,255,.09);--shadow:0 28px 90px rgba(0,0,0,.30)}
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Arial,sans-serif}
+    html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 20% 15%,rgba(56,189,248,.18),transparent 32%),radial-gradient(circle at 85% 20%,rgba(37,99,235,.16),transparent 30%),radial-gradient(circle at 45% 85%,rgba(14,165,233,.10),transparent 35%)}
+    body:after{content:"";position:fixed;inset:0;z-index:-1;opacity:.22;background-image:linear-gradient(rgba(56,189,248,.15) 1px,transparent 1px),linear-gradient(90deg,rgba(56,189,248,.15) 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(to bottom,black,transparent 78%)}
+    a{color:inherit;text-decoration:none}.container{width:90%;max-width:1180px;margin:auto}
+    header{position:sticky;top:0;z-index:20;padding:18px 0;background:rgba(2,6,23,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:24px}.brand{display:flex;align-items:center;gap:12px}.brand img{width:34px;height:34px;border-radius:10px}.logo{color:#fff;font-weight:900;font-size:18px}.nav-links{display:flex;align-items:center;gap:22px}.nav-links a{color:var(--soft);font-size:14px;transition:.22s}.nav-links a:hover{color:var(--blue)}
+    section{padding:82px 0}.hero{min-height:90vh;display:flex;align-items:center;padding-top:64px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+    .badge{display:inline-block;padding:9px 15px;border-radius:999px;background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.35);color:var(--blue);font-weight:800;font-size:13px;margin-bottom:24px;letter-spacing:.2px}
+    h1{font-size:clamp(42px,6.5vw,76px);line-height:1.03;letter-spacing:-2px;margin-bottom:24px}h1 span{color:var(--blue)}.hero p{color:var(--soft);font-size:18px;max-width:760px;margin-bottom:32px}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap}.btn{padding:14px 22px;border-radius:14px;font-weight:850;transition:.25s;font-size:15px;display:inline-flex;align-items:center;justify-content:center}.btn-primary{background:var(--blue);color:#020617;box-shadow:0 12px 35px rgba(56,189,248,.22)}.btn-primary:hover{background:#0ea5e9;transform:translateY(-2px)}.btn-secondary{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.03)}.btn-secondary:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
+    .glass{background:linear-gradient(145deg,rgba(15,23,42,.78),rgba(2,6,23,.58));border:1px solid var(--line);border-radius:24px;backdrop-filter:blur(18px);box-shadow:var(--shadow)}
+    .profile-card{padding:0;overflow:hidden}.profile-visual{position:relative;min-height:470px;background:radial-gradient(circle at 50% 10%,rgba(56,189,248,.22),transparent 45%),linear-gradient(145deg,rgba(37,99,235,.15),rgba(2,6,23,.05));display:flex;align-items:flex-end;justify-content:center;border-bottom:1px solid var(--line)}
+    .profile-visual:before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;background:rgba(56,189,248,.09);bottom:32px;border:1px solid rgba(56,189,248,.14)}.profile-photo{position:relative;z-index:1;width:min(86%,390px);max-height:455px;object-fit:cover;object-position:center top;filter:drop-shadow(0 28px 48px rgba(0,0,0,.38))}
+    .profile-body{padding:26px}.profile-body h3{font-size:25px;margin-bottom:6px}.profile-body p{color:var(--muted);margin-bottom:18px}.stat{display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.08);padding:13px 0;color:var(--soft);gap:18px}.stat strong{color:#fff;text-align:right}
+    .hero-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}.metric{padding:16px;border-radius:18px;background:rgba(15,23,42,.54);border:1px solid var(--line)}.metric strong{display:block;color:var(--blue);font-size:24px;line-height:1;margin-bottom:6px}.metric span{color:var(--muted);font-size:12.5px}
+    .section-title{font-size:38px;letter-spacing:-1px;margin-bottom:12px}.section-desc{color:var(--muted);max-width:850px;font-size:17px;margin-bottom:36px}.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:24px;transition:.25s}.card:hover{transform:translateY(-5px);border-color:rgba(56,189,248,.45)}.card h3{color:var(--blue);font-size:19px;margin-bottom:10px}.card p,.card li{color:var(--soft);font-size:14.5px}ul{padding-left:18px}.achievement strong{display:block;font-size:34px;color:var(--blue);margin-bottom:8px}
+    .timeline{display:grid;gap:18px}.job{padding:26px;border-left:4px solid var(--blue)}.job h3{font-size:22px;margin-bottom:5px}.job span{color:var(--blue);font-weight:800;font-size:14px}.job p{color:var(--soft);margin-top:12px}.job ul{margin-top:12px}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.pill-list{display:flex;flex-wrap:wrap;gap:10px}.pill{padding:9px 12px;border-radius:999px;background:rgba(56,189,248,.10);border:1px solid rgba(56,189,248,.22);color:#dbeafe;font-size:14px}
+    .contact{text-align:center;background:linear-gradient(135deg,rgba(56,189,248,.13),rgba(37,99,235,.10))}.contact h2{font-size:42px;margin-bottom:14px}.contact p{color:var(--soft);margin-bottom:28px}footer{padding:28px 0;text-align:center;color:#64748b;border-top:1px solid var(--line)}
+    .reveal{opacity:0;transform:translateY(18px);animation:reveal .75s ease forwards}.delay-1{animation-delay:.12s}@keyframes reveal{to{opacity:1;transform:translateY(0)}}
+    @media(max-width:980px){.hero-grid,.grid-4,.grid-3,.skills{grid-template-columns:1fr}.hero-metrics{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}h1{letter-spacing:-1px}.profile-card{max-width:520px;margin:auto}}
+    @media(max-width:560px){section{padding:62px 0}.hero{min-height:auto}.buttons{flex-direction:column}.btn{text-align:center}.stat{font-size:14px}.hero-metrics{grid-template-columns:1fr 1fr}.profile-visual{min-height:360px}.profile-photo{width:92%;max-height:345px}.brand img{width:30px;height:30px}.logo{font-size:16px}}
   </style>
 </head>
-
 <body>
-<header>
-  <div class="container">
-    <nav>
-      <a class="brand" href="#top" aria-label="Ayhan Uzundal home">
-        <img src="favicon.png" alt="AU logo">
-        <span>AYHAN UZUNDAL</span>
-      </a>
-
-      <div class="nav-links">
-        <a class="active" href="#top">Home</a>
-        <a href="#about">About</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </div>
-
-      <a class="nav-cv" href="#" onclick="return false;">⇩ Download CV</a>
-    </nav>
-  </div>
-</header>
-
+<header><div class="container"><nav><a class="brand" href="#top" aria-label="Ayhan Uzundal homepage"><img src="favicon.png" alt="AU logo"><div class="logo">Ayhan Uzundal</div></a><div class="nav-links"><a href="#about">About</a><a href="#capabilities">Capabilities</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav></div></header>
 <main id="top">
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="fade">
-        <div class="eyebrow">SOFTWARE ENGINEERING MANAGER</div>
-        <h1>Building Products.<br>Leading People.<span>Delivering Impact.</span></h1>
-        <p class="hero-copy">
-          Software Engineering Manager with 10+ years of experience leading enterprise-scale software delivery,
-          automation, and cross-functional teams. Passionate about creating reliable, scalable solutions that drive
-          real business value.
-        </p>
-
-        <div class="buttons">
-          <a class="btn btn-primary" href="#" onclick="return false;">⇩ Download CV</a>
-          <a class="btn btn-secondary" href="mailto:ayhanuzundal@gmail.com">✉ Contact Me</a>
-        </div>
-
-        <div class="metrics">
-          <div class="metric"><div class="icon">♙</div><strong>20+</strong><span>Engineers Led</span></div>
-          <div class="metric"><div class="icon">▣</div><strong>$8M+</strong><span>Program Scale</span></div>
-          <div class="metric"><div class="icon">◷</div><strong>10+</strong><span>Years Experience</span></div>
-          <div class="metric"><div class="icon">✦</div><strong>100+</strong><span>Projects Delivered</span></div>
-        </div>
-      </div>
-
-      <aside class="photo-card fade delay">
-        <div class="photo-wrap">
-          <img class="profile-photo" src="pp.jpg" alt="Ayhan Uzundal profile photo">
-        </div>
-        <div class="info-strip">
-          <div class="info-item"><div class="icon">⌖</div><strong>Istanbul, Türkiye</strong><span>Open to Hybrid / Remote</span></div>
-          <div class="info-item"><div class="icon">▢</div><strong>Since Nov 2024</strong><span>at Huawei</span></div>
-          <div class="info-item"><div class="icon">in</div><strong>LinkedIn</strong><span>Connect with me</span></div>
-        </div>
-      </aside>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container">
-      <div class="about-block">
-        <div>
-          <div class="label">About Me</div>
-          <h2 class="section-title">Turning Complexity into Simple, Scalable Solutions</h2>
-        </div>
-        <p class="section-desc">
-          I lead cross-functional teams to deliver high-quality software products on time and at scale.
-          My focus is on automation, AI, test strategy, and building a culture of ownership and continuous improvement.
-        </p>
-        <a class="btn btn-secondary learn" href="#experience">♙ Learn More About Me</a>
-      </div>
-
-      <div id="expertise" class="cards">
-        <div class="card"><div class="icon">♙</div><h3>Team Leadership</h3><p>Leading and mentoring 20+ engineers across QA, Dev and Automation teams.</p></div>
-        <div class="card"><div class="icon">✦</div><h3>Delivery Excellence</h3><p>Owned $8M+ programs and delivered enterprise solutions across multiple regions.</p></div>
-        <div class="card"><div class="icon">&lt;/&gt;</div><h3>Automation & AI</h3><p>Building automation frameworks and AI-powered solutions to improve quality and speed.</p></div>
-        <div class="card"><div class="icon">▥</div><h3>Business Impact</h3><p>Driving measurable results through data-driven decisions and stakeholder alignment.</p></div>
-      </div>
-
-      <div id="skills" class="tools">
-        <div class="label">Technologies & Tools</div>
-        <div class="tool-list">
-          <span class="pill"><b>●</b>Python</span>
-          <span class="pill"><b>●</b>Java</span>
-          <span class="pill"><b>●</b>Selenium</span>
-          <span class="pill"><b>●</b>Appium</span>
-          <span class="pill"><b>●</b>Playwright</span>
-          <span class="pill"><b>●</b>Cucumber</span>
-          <span class="pill"><b>●</b>Jenkins</span>
-          <span class="pill"><b>●</b>Docker</span>
-          <span class="pill"><b>●</b>Kubernetes</span>
-          <span class="pill"><b>●</b>AWS</span>
-          <span class="pill"><b>●</b>SQL</span>
-          <span class="pill"><b>●</b>Postman</span>
-          <span class="pill"><b>●</b>Git</span>
-          <span class="pill"><b>●</b>Jira</span>
-          <span class="pill"><b>●</b>Confluence</span>
-          <span class="pill"><b>●</b>Linux</span>
-          <span class="pill"><b>●</b>Elastic</span>
-          <span class="pill"><b>…</b>More</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience" style="display:none;"></section>
-  <section id="projects" style="display:none;"></section>
-</main>
-
-<section id="contact" class="footer-contact">
-  <div class="container contact-grid">
-    <div class="contact-item"><div class="icon">✉</div><div><strong>Email</strong><a href="mailto:ayhanuzundal@gmail.com">ayhanuzundal@gmail.com</a></div></div>
-    <div class="contact-item"><div class="icon">☏</div><div><strong>Phone</strong><a href="tel:+905417926528">+90 541 792 65 28</a></div></div>
-    <div class="contact-item"><div class="icon">⌖</div><div><strong>Location</strong><span>Istanbul, Türkiye<br>Open to Hybrid / Remote</span></div></div>
-    <div class="contact-item"><div class="icon">in</div><div><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/ayhanuzundal" target="_blank" rel="noopener">linkedin.com/in/ayhanuzundal</a></div></div>
-  </div>
-</section>
-
-<footer>
-  <div class="socials">
-    <a href="https://www.linkedin.com/in/ayhanuzundal" target="_blank" rel="noopener">in</a>
-    <a href="https://www.github.com/ayhanuzundal" target="_blank" rel="noopener">⌘</a>
-    <a href="mailto:ayhanuzundal@gmail.com">✉</a>
-  </div>
-  © 2026 Ayhan Uzundal. All rights reserved.
-</footer>
-</body>
-</html>
+<section class="hero"><div class="container hero-grid"><div class="reveal"><div class="badge">Software Engineering Manager • Product & Delivery Leader</div><h1>Building products. Leading people. <span>Delivering impact.</span></h1><p>Software Engineering Manager with 10+ years of experience leading enterprise-scale software delivery across telecom, e-commerce, industrial automation, and mobile platforms. Strong background in Agile delivery, CI/CD transformation, engineering governance, automation, and distributed team leadership.</p><div class="buttons"><a class="btn btn-primary" href="mailto:ayhanuzundal@gmail.com">Contact Me</a><a class="btn btn-secondary" href="https://www.linkedin.com/in/ayhanuzundal" target="_blank" rel="noopener">LinkedIn</a><a class="btn btn-secondary" href="https://www.github.com/ayhanuzundal" target="_blank" rel="noopener">GitHub</a></div><div class="hero-metrics"><div class="metric"><strong>20+</strong><span>Engineers Led</span></div><div class="metric"><strong>$8M+</strong><span>Program Scale</span></div><div class="metric"><strong>10+</strong><span>Years Experience</span></div><div class="metric"><strong>100+</strong><span>Product Issues Found</span></div></div></div><div class="profile-card glass reveal delay-1"><div class="profile-visual"><img class="profile-photo" src="pp.jpg" alt="Ayhan Uzundal profile photo"></div><div class="profile-body"><h3>Ayhan Uzundal</h3><p>Software Engineering Manager / Project Manager</p><div class="stat"><span>Experience</span><strong>10+ Years</strong></div><div class="stat"><span>Engineers Led</span><strong>20+</strong></div><div class="stat"><span>Program Scale</span><strong>$8M / €5M</strong></div><div class="stat"><span>Location</span><strong>Istanbul, Türkiye</strong></div></div></div></div></section>
+<section id="about"><div class="container"><h2 class="section-title">About</h2><p class="section-desc">I own end-to-end product and software delivery, define engineering strategy, and drive cross-functional execution across distributed teams. My leadership approach combines technical depth, delivery discipline, KPI/OKR governance, and stakeholder alignment to create measurable business outcomes.</p><div class="grid-3"><div class="card glass achievement"><strong>35%</strong><p>Product profitability improvement through roadmap optimization and resource allocation.</p></div><div class="card glass achievement"><strong>30%</strong><p>SDLC efficiency improvement through process optimization and delivery streamlining.</p></div><div class="card glass achievement"><strong>25%</strong><p>Customer satisfaction improvement through structured release cycles and feedback integration.</p></div></div></div></section>
+<section id="capabilities"><div class="container"><h2 class="section-title">Engineering Capabilities</h2><p class="section-desc">Core capabilities across engineering leadership, delivery ownership, product execution, and technical transformation.</p><div class="grid-4"><div class="card glass"><h3>Delivery Ownership</h3><p>End-to-end product and software delivery from roadmap to production release.</p></div><div class="card glass"><h3>Engineering Leadership</h3><p>Leadership across development, QA, DevOps, hiring, mentoring, and performance management.</p></div><div class="card glass"><h3>KPI / OKR Governance</h3><p>Data-driven delivery tracking, engineering transparency, and accountability models.</p></div><div class="card glass"><h3>CI/CD Transformation</h3><p>Pipeline optimization, quality gates, automation frameworks, and release governance.</p></div></div></div></section>
+<section id="experience"><div class="container"><h2 class="section-title">Work Experience</h2><p class="section-desc">Enterprise software delivery experience across Huawei, Siemens, Hepsiburada, Turkcell, and Netaş.</p><div class="timeline"><div class="job glass"><h3>Huawei — Software Engineering Manager / Project Manager</h3><span>November 2024 — Present | HarmonyOS Mobile Operating System New Version Project v6.0–v7.0</span><ul><li>Led 20+ engineers across software development, QA, and automation in a distributed Turkey–China organization.</li><li>Owned $8M-scale multi-regional delivery program from roadmap to production release.</li><li>Established KPI/OKR-driven engineering governance, improving transparency and delivery accountability.</li><li>Built and scaled an AI-assisted multilingual validation framework across 11 languages.</li><li>Reduced manual validation effort from approximately 39 hours to a few hours per cycle via automation.</li><li>Conducted 50+ technical interviews and supported engineering team scaling.</li><li>Delivered production releases with no major production incidents.</li></ul></div><div class="job glass"><h3>Siemens — Software Engineering Tech Lead</h3><span>April 2021 — November 2024 | 5G Smart Factory Network Management Platform</span><ul><li>Led a 10+ member engineering team across Development, Quality Engineering, and DevOps.</li><li>Defined end-to-end delivery strategy, quality governance, release processes, and automation roadmap.</li><li>Built CI/CD-integrated delivery pipelines, improving release efficiency by 50%.</li><li>Designed automation frameworks for UI, API, integration, regression, and performance validation.</li><li>Delivered €5M enterprise platform with zero critical production defects at release.</li></ul></div><div class="job glass"><h3>Hepsiburada — Senior Software Engineer</h3><span>July 2019 — April 2021 | Merchant Platform Transformation</span><ul><li>Contributed to modernization of Merchant Platform from legacy to microservices architecture.</li><li>Designed validation strategies for high-volume merchant workflows including listing, catalog, and orders.</li><li>Supported CI/CD pipelines, deployment stability, API validation, and engineering process improvements.</li></ul></div><div class="job glass"><h3>Turkcell via Netaş — Senior Software Engineer</h3><span>September 2016 — July 2019 | BiP & Fizy Platforms</span><ul><li>Contributed to large-scale telecom digital platforms under high traffic.</li><li>Supported API and backend engineering initiatives improving release stability.</li><li>Designed functional, integration, and regression validation strategies.</li></ul></div></div></div></section>
+<section id="skills"><div class="container"><h2 class="section-title">Technical Skills</h2><p class="section-desc">Engineering, automation, cloud, observability, and data technologies.</p><div class="skills"><div class="card glass"><h3>Engineering Practices</h3><div class="pill-list"><span class="pill">KPI / OKR</span><span class="pill">Agile</span><span class="pill">Scrum</span><span class="pill">Kanban</span><span class="pill">Release Governance</span><span class="pill">CI/CD</span><span class="pill">DevOps Transformation</span></div></div><div class="card glass"><h3>Programming & Engineering</h3><div class="pill-list"><span class="pill">Java</span><span class="pill">Python</span><span class="pill">JavaScript</span><span class="pill">SQL</span><span class="pill">REST APIs</span><span class="pill">Microservices</span></div></div><div class="card glass"><h3>Cloud & DevOps</h3><div class="pill-list"><span class="pill">Docker</span><span class="pill">Kubernetes</span><span class="pill">Azure</span><span class="pill">Huawei Cloud</span><span class="pill">Google Cloud</span><span class="pill">Jenkins</span><span class="pill">GitLab CI</span><span class="pill">Azure Pipelines</span></div></div><div class="card glass"><h3>Quality & Automation</h3><div class="pill-list"><span class="pill">Selenium</span><span class="pill">Appium</span><span class="pill">Playwright</span><span class="pill">RestAssured</span><span class="pill">API Testing</span><span class="pill">Automation Frameworks</span></div></div><div class="card glass"><h3>Observability</h3><div class="pill-list"><span class="pill">Grafana</span><span class="pill">Prometheus</span><span class="pill">Kibana</span><span class="pill">Logging</span><span class="pill">Monitoring Systems</span></div></div><div class="card glass"><h3>Data & Storage</h3><div class="pill-list"><span class="pill">PostgreSQL</span><span class="pill">MongoDB</span><span class="pill">Redis</span><span class="pill">Elasticsearch</span></div></div></div></div></section>
+<section id="education"><div class="container"><h2 class="section-title">Education & Certifications</h2><div class="grid-3"><div class="card glass"><h3>Istanbul University</h3><p>Master of Business Administration, MBA<br>2019 — 2021</p></div><div class="card glass"><h3>Duzce University</h3><p>Bachelor of Computer Engineering<br>2013 — 2017<br>GPA: 3.6 / 4.0</p></div><div class="card glass"><h3>Languages</h3><p>English — Fluent<br>Turkish — Fluent<br>German — Basics</p></div></div><br><div class="card glass"><h3>Certificates</h3><div class="pill-list"><span class="pill">PMP</span><span class="pill">CSPO</span><span class="pill">PSM I</span><span class="pill">ISTQB Advanced Test Automation Engineer</span><span class="pill">ISTQB Foundation Level</span><span class="pill">TÜBİTAK Enterprising and Business Management</span><span class="pill">MÜSİAD Businessman and Enterprising</span><span class="pill">Leadership and Business Management</span></div></div></div></section>
+<section id="contact" class="contact"><div class="container"><h2>Let’s connect.</h2><p>Open to conversations around engineering leadership, software delivery, QA transformation, automation strategy, and product execution.</p><div class="buttons" style="justify-content:center;"><a class="btn btn-primary" href="mailto:ayhanuzundal@gmail.com">ayhanuzundal@gmail.com</a><a class="btn btn-secondary" href="tel:+905392151636">+90 539 215 16 36</a><a class="btn btn-secondary" href="https://www.linkedin.com/in/ayhanuzundal" target="_blank" rel="noopener">LinkedIn</a><a class="btn btn-secondary" href="https://www.github.com/ayhanuzundal" target="_blank" rel="noopener">GitHub</a></div></div></section>
+</main><footer>© 2026 Ayhan Uzundal. References available upon request.</footer>
+</body></html>
