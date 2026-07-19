@@ -16,10 +16,26 @@ export const projects: Project[] = [
     highlight: "Flagship Super App",
   },
   {
+    id: "super-news",
+    title: "SuperNews",
+    description:
+      "AfterArtificial Super App for AI-assisted news — signals, briefings, and calm reading on After Framework standard APIs.",
+    tags: ["AfterArtificial", "After Framework", "Flutter", "News"],
+    highlight: "Super App",
+  },
+  {
+    id: "super-sports",
+    title: "SuperSports",
+    description:
+      "AfterArtificial Super App for sports — scores, teams, and Mate AI on the shared After Framework platform.",
+    tags: ["AfterArtificial", "After Framework", "Flutter", "Sports"],
+    highlight: "Super App",
+  },
+  {
     id: "afterartificial",
     title: "AfterArtificial",
     description:
-      "Public AI product company for the Super ecosystem — SuperGarage and the Super* family, powered by After Framework and engineered through Overstein Labs.",
+      "Public AI product company for the Super ecosystem — SuperGarage, SuperHealth, SuperNews, SuperSports, and more — powered by After Framework.",
     tags: ["Product Company", "Super Apps", "AI", "Platform"],
     highlight: "Founded Company",
   },
