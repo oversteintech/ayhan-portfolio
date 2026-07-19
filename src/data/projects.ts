@@ -4,6 +4,8 @@ export interface Project {
   description: string;
   tags: string[];
   highlight: string;
+  /** Public site — card navigates here on click when set. */
+  href?: string;
 }
 
 export const projects: Project[] = [
@@ -14,6 +16,7 @@ export const projects: Project[] = [
       "Flagship AfterArtificial Super App — an AI-powered vehicle assistant with smart reminders, maintenance tracking, expense management, marketplace integration, and live vehicle data. Built on After Framework with Flutter and Firebase.",
     tags: ["AfterArtificial", "After Framework", "Flutter", "AI", "Mobile"],
     highlight: "Flagship Super App",
+    href: "https://www.overstein.com/products/super-garage",
   },
   {
     id: "super-news",
@@ -22,6 +25,7 @@ export const projects: Project[] = [
       "AfterArtificial Super App for AI-assisted news — signals, briefings, and calm reading on After Framework standard APIs.",
     tags: ["AfterArtificial", "After Framework", "Flutter", "News"],
     highlight: "Super App",
+    href: "https://www.afterartificial.com/#products",
   },
   {
     id: "super-sports",
@@ -30,6 +34,7 @@ export const projects: Project[] = [
       "AfterArtificial Super App for sports — scores, teams, and Mate AI on the shared After Framework platform.",
     tags: ["AfterArtificial", "After Framework", "Flutter", "Sports"],
     highlight: "Super App",
+    href: "https://www.afterartificial.com/#products",
   },
   {
     id: "afterartificial",
@@ -38,6 +43,7 @@ export const projects: Project[] = [
       "Public AI product company for the Super ecosystem — SuperGarage, SuperHealth, SuperNews, SuperSports, and more — powered by After Framework.",
     tags: ["Product Company", "Super Apps", "AI", "Platform"],
     highlight: "Founded Company",
+    href: "https://www.afterartificial.com",
   },
   {
     id: "overstein",
@@ -46,6 +52,16 @@ export const projects: Project[] = [
       "Engineering brand behind After Framework — shared auth, membership, AI SDK, design system, and infrastructure so each Super App ships faster than the last.",
     tags: ["Engineering", "After Framework", "Flutter", "Platform"],
     highlight: "Engineering Lab",
+    href: "https://www.overstein.com",
+  },
+  {
+    id: "after-framework",
+    title: "After Framework",
+    description:
+      "Shared Super App OS — standard APIs for auth, networking, AI, premium, and design system behind every AfterArtificial product.",
+    tags: ["Platform", "After Framework", "Flutter", "APIs"],
+    highlight: "Platform",
+    href: "https://www.afterframework.com",
   },
   {
     id: "harmonyos-ai",

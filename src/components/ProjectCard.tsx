@@ -14,6 +14,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [hovered, setHovered] = useState(false);
   const reducedMotion = useReducedMotion();
+  const isLink = Boolean(project.href);
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -42,10 +43,12 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
     setHovered(false);
   };
 
-  return (
+  const card = (
     <motion.article
       ref={cardRef}
-      className="gradient-border group relative rounded-2xl p-px"
+      className={`gradient-border group relative rounded-2xl p-px ${
+        isLink ? "cursor-pointer" : ""
+      }`}
       style={
         reducedMotion
           ? {}
@@ -70,12 +73,17 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         />
 
         <div className="relative">
-          <div className="mb-4 flex items-center justify-between">
+          <div className="mb-4 flex items-center justify-between gap-3">
             <span className="text-xs font-medium tracking-wider text-electric-cyan uppercase">
               {project.highlight}
             </span>
-            <span className="font-mono text-xs text-silver/50">
-              0{index + 1}
+            <span className="flex items-center gap-2 font-mono text-xs text-silver/50">
+              {isLink ? (
+                <span className="text-electric-blue-bright/80 transition-transform group-hover:translate-x-0.5">
+                  Visit ↗
+                </span>
+              ) : null}
+              <span>0{index + 1}</span>
             </span>
           </div>
 
@@ -102,5 +110,21 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         <div className="absolute bottom-0 left-0 h-px w-full shimmer-line opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       </div>
     </motion.article>
+  );
+
+  if (!project.href) {
+    return card;
+  }
+
+  return (
+    <a
+      href={project.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-electric-blue/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-2xl"
+      aria-label={`${project.title} — open site`}
+    >
+      {card}
+    </a>
   );
 }
