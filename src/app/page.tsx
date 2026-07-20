@@ -1,36 +1,56 @@
-import AnimatedBackground from "@/components/AnimatedBackground";
-import GlowCursor from "@/components/GlowCursor";
-import LoadingScreen from "@/components/LoadingScreen";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Capabilities from "@/components/Capabilities";
 import Timeline from "@/components/Timeline";
-import Projects from "@/components/Projects";
-import SkillsMatrix from "@/components/SkillsMatrix";
-import Metrics from "@/components/Metrics";
-import FounderVision from "@/components/FounderVision";
-import Education from "@/components/Education";
+import Leadership from "@/components/Leadership";
+import Expertise from "@/components/Expertise";
+import Capabilities from "@/components/Capabilities";
+import Ventures from "@/components/Ventures";
+import Credentials from "@/components/Credentials";
+import FutureScaffold from "@/components/FutureScaffold";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Ayhan Uzundal",
+    url: "https://www.ayhanuzundal.com.tr",
+    jobTitle: "Senior Key Account Manager",
+    worksFor: {
+      "@type": "Organization",
+      name: "Huawei Enterprise",
+    },
+    alumniOf: [
+      { "@type": "CollegeOrUniversity", name: "Istanbul University" },
+      { "@type": "CollegeOrUniversity", name: "Düzce University" },
+    ],
+    sameAs: ["https://www.linkedin.com/in/ayhan-uzundal"],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Istanbul",
+      addressCountry: "TR",
+    },
+  };
+
   return (
     <>
-      <LoadingScreen />
-      <AnimatedBackground />
-      <GlowCursor />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       <main>
         <Hero />
         <About />
-        <Capabilities />
         <Timeline />
-        <Projects />
-        <SkillsMatrix />
-        <Metrics />
-        <FounderVision />
-        <Education />
+        <Leadership />
+        <Expertise />
+        <Capabilities />
+        <Ventures />
+        <Credentials />
+        <FutureScaffold />
         <Contact />
       </main>
       <Footer />

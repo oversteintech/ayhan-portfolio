@@ -1,43 +1,43 @@
-import { capabilities } from "@/data/capabilities";
 import SectionReveal from "./SectionReveal";
+
+const pillars = [
+  {
+    title: "AI & Digital Transformation",
+    description:
+      "I connect AI and platform capabilities to operating models — from enterprise automation to productized intelligence — without losing sight of governance, risk, and adoption.",
+  },
+  {
+    title: "Engineering Leadership",
+    description:
+      "I have owned multi-million programs, led 20+ engineers, and built delivery systems with KPI/OKR clarity. That depth informs how I advise and sell enterprise technology today.",
+  },
+  {
+    title: "Business Development",
+    description:
+      "Strategic account ownership means aligning technical truth with commercial progress: stakeholder maps, solution narratives, and decisions that advance the customer.",
+  },
+];
 
 export default function Capabilities() {
   return (
-    <section
-      className="section-padding relative pt-0"
-      aria-labelledby="capabilities-heading"
-    >
+    <section className="section-pad relative pt-0" aria-labelledby="capabilities-heading">
       <div className="container-max">
         <SectionReveal>
-          <div className="mb-12 max-w-3xl">
-            <p className="mb-4 text-sm font-medium tracking-[0.2em] text-electric-blue uppercase">
-              Engineering Capabilities
-            </p>
-            <h2
-              id="capabilities-heading"
-              className="text-2xl font-bold tracking-tight sm:text-3xl"
-            >
-              Core capabilities across leadership, delivery, and transformation
-            </h2>
+          <h2 id="capabilities-heading" className="sr-only">
+            Core capabilities
+          </h2>
+          <div className="grid gap-5 lg:grid-cols-3">
+            {pillars.map((p, i) => (
+              <div key={p.title} className="panel rounded-3xl p-6 sm:p-8">
+                <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-accent uppercase">
+                  0{i + 1}
+                </p>
+                <h3 className="mb-3 text-lg font-semibold">{p.title}</h3>
+                <p className="text-sm leading-relaxed text-muted">{p.description}</p>
+              </div>
+            ))}
           </div>
         </SectionReveal>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {capabilities.map((item, i) => (
-            <SectionReveal key={item.title} delay={i * 0.08}>
-              <div className="gradient-border group h-full rounded-2xl p-px">
-                <div className="glass-panel h-full rounded-2xl p-6 transition-colors duration-500 group-hover:bg-white/[0.04]">
-                  <h3 className="mb-3 text-base font-semibold text-foreground">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-silver">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            </SectionReveal>
-          ))}
-        </div>
       </div>
     </section>
   );

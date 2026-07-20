@@ -13,23 +13,23 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#030303",
+          background: "#050505",
           borderRadius: 8,
-          border: "1px solid rgba(59, 130, 246, 0.35)",
+          border: "1px solid rgba(196,165,116,0.45)",
         }}
       >
         <div
           style={{
             display: "flex",
             alignItems: "baseline",
-            fontSize: 15,
+            fontSize: 14,
             fontWeight: 700,
             letterSpacing: "-0.04em",
-            fontFamily: "system-ui, sans-serif",
+            fontFamily: "Georgia, serif",
           }}
         >
-          <span style={{ color: "#f0f0f0" }}>AU</span>
-          <span style={{ color: "#3b82f6" }}>.</span>
+          <span style={{ color: "#f4f4f5" }}>AU</span>
+          <span style={{ color: "#c4a574" }}>.</span>
         </div>
       </div>
     ),

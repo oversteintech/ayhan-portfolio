@@ -3,167 +3,119 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-
-const heroStats = [
-  { value: "20+", label: "Engineers Led" },
-  { value: "$8M+", label: "Program Scale" },
-  { value: "10+", label: "Years Experience" },
-  { value: "100+", label: "Product Issues Found" },
-];
-
-const profileHighlights = [
-  "AfterArtificial",
-  "After Framework",
-  "Overstein Labs",
-  "SuperGarage",
-];
+import { proofMetrics } from "@/data/brand";
 
 export default function Hero() {
-  const reducedMotion = useReducedMotion();
+  const reduced = useReducedMotion();
 
   return (
-    <section
-      id="hero"
-      className="relative flex min-h-screen items-center section-padding pt-32"
-      aria-labelledby="hero-heading"
-    >
-      <div className="container-max grid items-center gap-12 lg:grid-cols-[1fr_auto] lg:gap-16">
-        <div className="max-w-3xl">
-          <motion.div
-            initial={reducedMotion ? false : { opacity: 0, y: 20 }}
+    <section id="top" className="section-pad relative pt-28 md:pt-36" aria-labelledby="hero-heading">
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute left-1/2 top-0 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-accent/10 blur-[120px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.04),transparent_55%)]" />
+      </div>
+
+      <div className="container-max grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+        <div>
+          <motion.p
+            className="eyebrow mb-5"
+            initial={reduced ? false : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.6 }}
           >
-            <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-electric-blue/20 bg-electric-blue/5 px-4 py-1.5 text-xs font-medium tracking-wider text-electric-blue-bright uppercase">
-              <span className="h-1.5 w-1.5 rounded-full bg-electric-blue animate-pulse" />
-              Software Engineering Manager · Founder of AfterArtificial
-            </span>
-          </motion.div>
+            Huawei Enterprise · Technology Business Leader · MBA · PMP
+          </motion.p>
 
           <motion.h1
             id="hero-heading"
-            className="mb-6 text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl"
-            initial={reducedMotion ? false : { opacity: 0, y: 30 }}
+            className="font-display mb-6 max-w-3xl text-4xl leading-[1.08] tracking-tight text-balance sm:text-5xl lg:text-6xl"
+            initial={reduced ? false : { opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.7, delay: 0.08 }}
           >
-            Building products.{" "}
-            <span className="text-gradient">Leading people.</span> Delivering
-            impact.
+            I bridge business and technology.
           </motion.h1>
 
           <motion.p
-            className="mb-8 max-w-2xl text-lg leading-relaxed text-silver sm:text-xl"
-            initial={reducedMotion ? false : { opacity: 0, y: 20 }}
+            className="mb-8 max-w-2xl text-lg leading-relaxed text-muted"
+            initial={reduced ? false : { opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.7, delay: 0.16 }}
           >
-            Software Engineering Manager with 10+ years leading enterprise-scale
-            delivery — and founder of{" "}
-            <span className="text-foreground">AfterArtificial</span>, building
-            Super Apps on{" "}
-            <span className="text-foreground">After Framework</span> with
-            engineering through{" "}
-            <span className="text-foreground">Overstein Labs</span>. Flagship:{" "}
-            <span className="text-foreground">SuperGarage</span>.
+            Senior Key Account Manager at Huawei Enterprise. Former Software
+            Engineering Manager. Founder of AfterArtificial. I help organizations
+            turn ICT, AI, and digital platforms into outcomes — and I build
+            ventures that prove it.
           </motion.p>
 
           <motion.div
-            className="mb-10 grid grid-cols-2 gap-4 sm:grid-cols-4"
-            initial={reducedMotion ? false : { opacity: 0, y: 20 }}
+            className="mb-10 flex flex-wrap gap-3"
+            initial={reduced ? false : { opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
+            transition={{ duration: 0.7, delay: 0.24 }}
           >
-            {heroStats.map((stat) => (
-              <div key={stat.label} className="glass-panel rounded-xl px-4 py-3">
-                <p className="text-lg font-bold text-electric-blue-bright sm:text-xl">
-                  {stat.value}
-                </p>
-                <p className="text-[11px] leading-tight text-silver sm:text-xs">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </motion.div>
-
-          <motion.div
-            className="flex flex-wrap gap-4"
-            initial={reducedMotion ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <a
-              href="#projects"
-              className="inline-flex items-center justify-center rounded-full bg-electric-blue px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-electric-blue-bright hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]"
-            >
-              View Projects
-            </a>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full border border-white/15 px-7 py-3.5 text-sm font-semibold text-foreground transition-all duration-300 hover:border-white/30 hover:bg-white/5"
+              className="inline-flex rounded-full bg-accent px-6 py-3 text-sm font-semibold text-background transition hover:bg-accent-bright"
             >
-              Contact Me
+              Discuss a partnership
+            </a>
+            <a
+              href="#journey"
+              className="inline-flex rounded-full border border-border px-6 py-3 text-sm font-medium text-foreground transition hover:border-white/20"
+            >
+              View journey
             </a>
             <a
               href="/cv.pdf"
               download
-              className="inline-flex items-center justify-center rounded-full border border-white/10 px-7 py-3.5 text-sm font-medium text-silver transition-all duration-300 hover:border-white/20 hover:text-foreground"
+              className="inline-flex rounded-full border border-border px-6 py-3 text-sm font-medium text-muted transition hover:text-foreground"
             >
               Download CV
             </a>
           </motion.div>
+
+          <motion.div
+            className="grid grid-cols-2 gap-3 sm:grid-cols-4"
+            initial={reduced ? false : { opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.32 }}
+          >
+            {proofMetrics.map((m) => (
+              <div key={m.label} className="panel rounded-2xl px-4 py-3">
+                <p className="text-xl font-semibold text-accent-bright">{m.value}</p>
+                <p className="mt-1 text-xs leading-snug text-muted">{m.label}</p>
+              </div>
+            ))}
+          </motion.div>
         </div>
 
-        <motion.div
-          className="mx-auto w-full max-w-[300px] lg:mx-0 lg:max-w-[320px]"
-          initial={reducedMotion ? false : { opacity: 0, scale: 0.95 }}
+        <motion.aside
+          className="mx-auto w-full max-w-sm"
+          initial={reduced ? false : { opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="gradient-border rounded-3xl p-px">
-            <div className="glass-panel relative overflow-hidden rounded-3xl px-6 py-8">
-              <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-br from-electric-blue/10 via-transparent to-electric-cyan/5" />
-
-              <div className="relative mx-auto mb-6 w-fit">
-                <div className="relative h-44 w-44 overflow-hidden rounded-2xl border border-white/10 sm:h-48 sm:w-48">
-                  <Image
-                    src="/profile.jpg"
-                    alt="Ayhan Uzundal — Founder of AfterArtificial"
-                    fill
-                    className="object-cover object-top"
-                    sizes="192px"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent" />
-                </div>
-              </div>
-
-              <div className="relative text-center">
-                <p className="text-xl font-semibold leading-tight text-foreground">
-                  Ayhan Uzundal
-                </p>
-                <p className="mt-2 text-sm leading-snug text-electric-blue-bright">
-                  Founder of AfterArtificial
-                </p>
-                <p className="text-sm leading-snug text-silver">
-                  Software Engineering Manager
-                </p>
-                <p className="mt-2 text-xs text-silver">Istanbul, Türkiye</p>
-              </div>
-
-              <div className="relative mt-5 flex flex-wrap justify-center gap-2">
-                {profileHighlights.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-medium text-silver-light"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
+          <div className="panel overflow-hidden rounded-3xl">
+            <div className="relative aspect-[4/5] bg-gradient-to-b from-white/5 to-transparent">
+              <Image
+                src="/profile.jpg"
+                alt="Ayhan Uzundal"
+                fill
+                priority
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 320px, 384px"
+              />
+            </div>
+            <div className="border-t border-border px-6 py-5">
+              <p className="font-display text-xl">Ayhan Uzundal</p>
+              <p className="mt-1 text-sm text-accent-bright">
+                Senior Key Account Manager · Huawei Enterprise
+              </p>
+              <p className="mt-1 text-sm text-muted">Istanbul, Türkiye</p>
             </div>
           </div>
-        </motion.div>
+        </motion.aside>
       </div>
     </section>
   );

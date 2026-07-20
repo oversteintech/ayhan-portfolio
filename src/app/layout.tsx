@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, Geist_Mono } from "next/font/google";
+import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
-  variable: "--font-inter",
+  variable: "--font-sans",
   subsets: ["latin"],
   display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const instrument = Instrument_Serif({
+  variable: "--font-display",
   subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
@@ -19,26 +20,23 @@ const siteUrl = "https://www.ayhanuzundal.com.tr";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Ayhan Uzundal | Founder of AfterArtificial",
+    default: "Ayhan Uzundal | Technology Business Leader · Huawei Enterprise · MBA · PMP",
     template: "%s | Ayhan Uzundal",
   },
   description:
-    "Founder of AfterArtificial. Engineering leader building Super Apps on After Framework with Overstein Labs. SuperGarage flagship. 10+ years enterprise delivery across telecom, e-commerce, and mobile.",
+    "Ayhan Uzundal bridges business and technology. Senior Key Account Manager at Huawei Enterprise, former Software Engineering Manager, Founder of AfterArtificial. Enterprise ICT, AI, cloud, and digital transformation.",
   keywords: [
     "Ayhan Uzundal",
+    "Technology Business Leader",
+    "Huawei Enterprise",
+    "Key Account Manager",
+    "Engineering Manager",
+    "MBA",
+    "PMP",
+    "Digital Transformation",
+    "Artificial Intelligence",
+    "Enterprise ICT",
     "AfterArtificial",
-    "After Framework",
-    "Overstein Labs",
-    "SuperGarage",
-    "Software Engineering Manager",
-    "QA Automation",
-    "AI Automation",
-    "HarmonyOS",
-    "CI/CD",
-    "Engineering Leadership",
-    "Huawei",
-    "Siemens",
-    "Hepsiburada",
     "Istanbul",
   ],
   authors: [{ name: "Ayhan Uzundal", url: siteUrl }],
@@ -48,41 +46,30 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: "Ayhan Uzundal",
-    title: "Ayhan Uzundal | Founder of AfterArtificial",
+    title: "Ayhan Uzundal | I bridge business and technology.",
     description:
-      "Founder of AfterArtificial. Building Super Apps on After Framework with Overstein Labs. Flagship: SuperGarage.",
-    images: [
-      {
-        url: "/og-image.svg",
-        width: 1200,
-        height: 630,
-        alt: "Ayhan Uzundal — Founder of AfterArtificial",
-      },
-    ],
+      "Senior Key Account Manager at Huawei Enterprise. Former Software Engineering Manager. Founder of AfterArtificial.",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Ayhan Uzundal" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ayhan Uzundal | Founder of AfterArtificial",
-    description:
-      "Founder of AfterArtificial · Engineering via Overstein Labs · SuperGarage",
-    images: ["/og-image.svg"],
+    title: "Ayhan Uzundal | Technology Business Leader",
+    description: "I bridge business and technology.",
+    images: ["/og-image.jpg"],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: siteUrl,
+  robots: { index: true, follow: true },
+  alternates: { canonical: siteUrl },
+  icons: {
+    icon: "/favicon.png",
+    apple: "/apple-touch-icon.png",
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${geistMono.variable} h-full`}>
+    <html lang="en" className={`${inter.variable} ${instrument.variable} h-full`}>
       <body className="min-h-full bg-background text-foreground antialiased">
         {children}
       </body>

@@ -2,88 +2,80 @@ export interface ExperienceItem {
   company: string;
   role: string;
   period: string;
-  project: string;
+  location?: string;
+  summary: string;
   impact: string[];
-  technologies: string[];
+  domains: string[];
 }
 
 export const experience: ExperienceItem[] = [
   {
+    company: "Huawei Enterprise",
+    role: "Senior Key Account Manager",
+    period: "Present",
+    location: "Istanbul, Türkiye",
+    summary:
+      "Leading strategic enterprise ICT relationships across cloud, AI, networking, data center, and digital transformation initiatives.",
+    impact: [
+      "Own end-to-end key account strategy: stakeholder alignment, solution framing, and commercial progression",
+      "Translate complex ICT portfolios into board-level outcomes for CIOs, CTOs, and IT directors",
+      "Bridge customer business priorities with Huawei Enterprise capabilities across AI, cloud, and infrastructure",
+      "Drive multi-stakeholder engagement across technical, commercial, and executive layers",
+    ],
+    domains: ["Enterprise ICT", "AI", "Cloud", "Networking", "Digital Transformation"],
+  },
+  {
     company: "Huawei",
     role: "Software Engineering Manager / Project Manager",
-    period: "November 2024 — Present",
-    project: "HarmonyOS Mobile Operating System New Version Project v6.0–v7.0",
+    period: "November 2024 — Transition",
+    location: "Istanbul, Türkiye · Turkey–China distributed organization",
+    summary:
+      "Led engineering delivery for HarmonyOS new version programs with multi-regional ownership and KPI/OKR governance.",
     impact: [
-      "Led 20+ engineers across software development, QA, and automation in a distributed Turkey–China organization",
-      "Owned $8M-scale multi-regional delivery program from roadmap to production release",
-      "Established KPI/OKR-driven engineering governance, improving transparency and delivery accountability",
-      "Built and scaled an AI-assisted multilingual validation framework across 11 languages",
-      "Reduced manual validation effort from ~39 hours to a few hours per cycle via automation",
-      "Conducted 50+ technical interviews and supported engineering team scaling",
+      "Led 20+ engineers across software development, QA, and automation",
+      "Owned $8M-scale multi-regional delivery from roadmap to production release",
+      "Built AI-assisted multilingual validation across 11 languages, cutting cycle time from ~39 hours to hours",
+      "Conducted 50+ technical interviews and scaled engineering capacity",
       "Delivered production releases with no major production incidents",
     ],
-    technologies: [
-      "HarmonyOS",
-      "AI Automation",
-      "KPI/OKR",
-      "CI/CD",
-      "Team Leadership",
-    ],
+    domains: ["Engineering Leadership", "AI Automation", "Program Delivery", "HarmonyOS"],
   },
   {
     company: "Siemens",
-    role: "Software Engineering Tech Lead",
+    role: "Software Engineering Tech Lead / Senior Expert",
     period: "April 2021 — November 2024",
-    project: "5G Smart Factory Network Management Platform",
+    summary:
+      "Led delivery and quality architecture for a 5G Smart Factory Network Management Platform.",
     impact: [
-      "Led a 10+ member engineering team across Development, Quality Engineering, and DevOps",
-      "Defined end-to-end delivery strategy, quality governance, release processes, and automation roadmap",
-      "Built CI/CD-integrated delivery pipelines, improving release efficiency by 50%",
+      "Led a 10+ member team across Development, Quality Engineering, and DevOps",
+      "Improved release efficiency by 50% through CI/CD-integrated delivery pipelines",
       "Designed automation frameworks for UI, API, integration, regression, and performance validation",
-      "Delivered €5M enterprise platform with zero critical production defects at release",
+      "Delivered a €5M enterprise platform with zero critical production defects at release",
     ],
-    technologies: [
-      "5G",
-      "CI/CD",
-      "Automation Frameworks",
-      "DevOps",
-      "Enterprise QA",
-    ],
+    domains: ["5G", "Industrial Automation", "CI/CD", "Enterprise Platforms"],
   },
   {
     company: "Hepsiburada",
-    role: "Senior Software Engineer",
+    role: "Senior Software Quality Assurance Engineer",
     period: "July 2019 — April 2021",
-    project: "Merchant Platform Transformation",
+    summary:
+      "Supported merchant platform modernization from legacy systems to microservices under high-volume e-commerce load.",
     impact: [
-      "Contributed to modernization of Merchant Platform from legacy to microservices architecture",
-      "Designed validation strategies for high-volume merchant workflows including listing, catalog, and orders",
-      "Supported CI/CD pipelines, deployment stability, API validation, and engineering process improvements",
+      "Designed validation strategies for listing, catalog, and order workflows",
+      "Strengthened CI/CD stability, API validation, and release predictability",
     ],
-    technologies: [
-      "Microservices",
-      "API Testing",
-      "CI/CD",
-      "E-commerce",
-      "Java",
-    ],
+    domains: ["E-commerce", "Microservices", "API Validation"],
   },
   {
     company: "Turkcell via Netaş",
     role: "Senior Software Engineer",
     period: "September 2016 — July 2019",
-    project: "BiP & Fizy Platforms",
+    summary:
+      "Contributed to large-scale telecom digital platforms including BiP and Fizy under high traffic.",
     impact: [
-      "Contributed to large-scale telecom digital platforms under high traffic",
-      "Supported API and backend engineering initiatives improving release stability",
+      "Supported API and backend reliability initiatives for consumer-facing platforms",
       "Designed functional, integration, and regression validation strategies",
     ],
-    technologies: [
-      "Telecom",
-      "API Engineering",
-      "High Traffic Systems",
-      "BiP",
-      "Fizy",
-    ],
+    domains: ["Telecom", "High Traffic Systems", "Digital Platforms"],
   },
 ];

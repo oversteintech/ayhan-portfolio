@@ -1,53 +1,43 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 
-const navLinks = [
+const links = [
   { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Education", href: "#education" },
-  { label: "Vision", href: "#vision" },
+  { label: "Journey", href: "#journey" },
+  { label: "Expertise", href: "#expertise" },
+  { label: "Leadership", href: "#leadership" },
+  { label: "Ventures", href: "#ventures" },
+  { label: "Credentials", href: "#credentials" },
   { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
+    const onScroll = () => setScrolled(window.scrollY > 24);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "glass-panel border-b border-white/5 py-3"
-          : "bg-transparent py-5"
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+        scrolled ? "border-b border-border bg-background/80 backdrop-blur-xl py-3" : "bg-transparent py-5"
       }`}
     >
-      <nav className="container-max flex items-center justify-between px-6" aria-label="Main navigation">
-        <a
-          href="#"
-          className="text-lg font-semibold tracking-tight text-foreground transition-colors hover:text-electric-blue-bright"
-          aria-label="Ayhan Uzundal — Home"
-        >
-          AU<span className="text-electric-blue">.</span>
+      <nav className="container-max flex items-center justify-between px-6" aria-label="Primary">
+        <a href="#top" className="font-display text-lg tracking-tight text-foreground">
+          Ayhan Uzundal
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="text-sm text-silver transition-colors duration-300 hover:text-foreground"
-              >
-                {link.label}
+        <ul className="hidden items-center gap-7 lg:flex">
+          {links.map((l) => (
+            <li key={l.href}>
+              <a href={l.href} className="text-sm text-muted transition-colors hover:text-foreground">
+                {l.label}
               </a>
             </li>
           ))}
@@ -55,56 +45,43 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="hidden rounded-full border border-electric-blue/30 bg-electric-blue/10 px-5 py-2 text-sm font-medium text-electric-blue-bright transition-all duration-300 hover:border-electric-blue/50 hover:bg-electric-blue/20 md:inline-block"
+          className="hidden rounded-full border border-accent/30 bg-accent-soft px-4 py-2 text-sm font-medium text-accent-bright transition hover:border-accent/50 lg:inline-flex"
         >
-          Get in Touch
+          Let’s talk
         </a>
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 md:hidden"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-expanded={mobileOpen}
+          className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border lg:hidden"
+          aria-expanded={open}
           aria-label="Toggle menu"
+          onClick={() => setOpen((v) => !v)}
         >
+          <span className="sr-only">Menu</span>
           <div className="flex flex-col gap-1.5">
-            <span className={`block h-0.5 w-5 bg-foreground transition-transform ${mobileOpen ? "translate-y-2 rotate-45" : ""}`} />
-            <span className={`block h-0.5 w-5 bg-foreground transition-opacity ${mobileOpen ? "opacity-0" : ""}`} />
-            <span className={`block h-0.5 w-5 bg-foreground transition-transform ${mobileOpen ? "-translate-y-2 -rotate-45" : ""}`} />
+            <span className={`block h-0.5 w-5 bg-foreground transition ${open ? "translate-y-2 rotate-45" : ""}`} />
+            <span className={`block h-0.5 w-5 bg-foreground transition ${open ? "opacity-0" : ""}`} />
+            <span className={`block h-0.5 w-5 bg-foreground transition ${open ? "-translate-y-2 -rotate-45" : ""}`} />
           </div>
         </button>
       </nav>
 
-      {mobileOpen && (
-        <motion.div
-          className="glass-panel border-t border-white/5 md:hidden"
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          exit={{ opacity: 0, height: 0 }}
-        >
-          <ul className="flex flex-col gap-1 px-6 py-4">
-            {navLinks.map((link) => (
-              <li key={link.href}>
+      {open && (
+        <div className="border-t border-border bg-background/95 px-6 py-4 lg:hidden">
+          <ul className="space-y-1">
+            {links.map((l) => (
+              <li key={l.href}>
                 <a
-                  href={link.href}
-                  className="block rounded-lg px-4 py-3 text-sm text-silver transition-colors hover:bg-white/5 hover:text-foreground"
-                  onClick={() => setMobileOpen(false)}
+                  href={l.href}
+                  className="block rounded-lg px-3 py-3 text-sm text-muted hover:bg-white/5 hover:text-foreground"
+                  onClick={() => setOpen(false)}
                 >
-                  {link.label}
+                  {l.label}
                 </a>
               </li>
             ))}
-            <li>
-              <a
-                href="#contact"
-                className="mt-2 block rounded-full border border-electric-blue/30 bg-electric-blue/10 px-4 py-3 text-center text-sm font-medium text-electric-blue-bright"
-                onClick={() => setMobileOpen(false)}
-              >
-                Get in Touch
-              </a>
-            </li>
           </ul>
-        </motion.div>
+        </div>
       )}
     </header>
   );
