@@ -640,7 +640,7 @@ html.theme-transition *::after {
 .hero-field {
   position: absolute;
   inset: 0;
-  z-index: -2;
+  z-index: 0;
   background: var(--surface-0);
 }
 
@@ -657,7 +657,7 @@ html.theme-transition *::after {
 .hero-scrim {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 1;
   pointer-events: none;
   background:
     linear-gradient(
@@ -668,6 +668,12 @@ html.theme-transition *::after {
       transparent 100%
     ),
     linear-gradient(to top, var(--surface-0), transparent 22%);
+}
+
+.hero > .container-x,
+.hero > a {
+  position: relative;
+  z-index: 2;
 }
 
 [dir="rtl"] .hero-scrim {
