@@ -53,10 +53,11 @@ export default function HeroVideo() {
       ref={ref}
       className="hero-video"
       poster="/media/hero-field-poster.jpg"
+      autoPlay
       muted
       loop
       playsInline
-      preload="none"
+      preload="auto"
       disablePictureInPicture
       aria-hidden="true"
       tabIndex={-1}
