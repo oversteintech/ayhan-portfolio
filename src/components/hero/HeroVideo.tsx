@@ -61,7 +61,6 @@ export default function HeroVideo() {
       aria-hidden="true"
       tabIndex={-1}
     >
-      <source src="/media/hero-field.webm" type="video/webm" />
       <source src="/media/hero-field.mp4" type="video/mp4" />
     </video>
   );
