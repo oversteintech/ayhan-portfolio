@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1c212a"/>
+      <stop offset="1" stop-color="#07090c"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f4f6f9"/>
+      <stop offset="0.5" stop-color="#a3acb9"/>
+      <stop offset="1" stop-color="#e2e6eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="26" fill="url(#tile)"/>
+  <g transform="translate(10 10) scale(0.8333)">
+    <g stroke="url(#steel)" stroke-width="6">
+      <path d="M18.63 25.29A54 54 0 0 1 56.23 6.13"/>
+      <path d="M63.77 6.13A54 54 0 0 1 101.37 25.29"/>
+      <path d="M101.37 94.71A54 54 0 0 1 63.77 113.87"/>
+      <path d="M56.23 113.87A54 54 0 0 1 18.63 94.71"/>
+    </g>
+    <g fill="url(#steel)" fill-rule="evenodd">
+      <path d="M23.45 39.6H52.35L58.3 45.55V74.45L52.35 80.4H23.45L17.5 74.45V45.55ZM26 48.1V71.9H49.8V48.1Z"/>
+      <path d="M67.65 39.6H102.5L97.4 48.1H70.2V55.75H96.55L102.5 61.7V74.45L96.55 80.4H61.7L66.8 71.9H94V64.25H67.65L61.7 58.3V45.55Z"/>
+    </g>
+  </g>
+</svg>
